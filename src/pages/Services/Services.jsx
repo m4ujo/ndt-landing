@@ -8,7 +8,7 @@ const Services = () => {
     <div id='services' className='Services'>
       <header className='Services-header'>
         <Carousel images={images} />
-        <h1 className='Services-title h1'>Services</h1>
+        <h2 className='Services-title h1'>Services</h2>
       </header>
       <section className='Services-section'>
         <div className='Services-content'>

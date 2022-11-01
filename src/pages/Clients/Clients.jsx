@@ -6,7 +6,7 @@ import './clients.scss'
 const Clients = () => {
   return (
     <div id='clients' className='Clients'>
-      <h3 className='Clients-title h1'>Clients</h3>
+      <h2 className='Clients-title h1'>Clients</h2>
       <div className='Clients-images'>
         <img src={Clients1} alt='' className='Clients-image' />
         <img src={Clients2} alt='' className='Clients-image' />
