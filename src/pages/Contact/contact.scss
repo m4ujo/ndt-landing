@@ -1,0 +1,153 @@
+@use './../../scss/mixins.scss' as mix;
+
+.Contact {
+  display: grid;
+  place-content: center;
+  padding: 6rem 0;
+  background-color: var(--secondary);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 223, 95, 1) 50%,
+    rgba(255, 214, 49, 1) 82%,
+    rgba(255, 204, 0, 1) 100%
+  );
+
+  &-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &-form {
+    width: 1100px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    @include mix.mqh(1150px) {
+      width: 950px;
+    }
+    @include mix.mqh(1000px) {
+      width: 850px;
+    }
+    @include mix.mqh(900px) {
+      width: 750px;
+      grid-template-columns: 50% 50%;
+    }
+    @include mix.mqh(800px) {
+      width: 650px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include mix.mqh(720px) {
+      width: 500px;
+    }
+    @include mix.mqh(550px) {
+      width: 400px;
+    }
+    @include mix.mqh(450px) {
+      width: 400px;
+    }
+    @include mix.mqh(410px) {
+      width: 350px;
+    }
+    @include mix.mqh(370px) {
+      width: 280px;
+    }
+    @include mix.mqh(300px) {
+      width: 250px;
+    }
+    @include mix.mqh(260px) {
+      width: 220px;
+    }
+    border-radius: 10px;
+    border: 3px solid var(--fg-title);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+
+  &-aside {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--primary);
+    gap: 0.5rem;
+    @include mix.mqh(370px) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &-infoSubtitle {
+    margin-bottom: 10px;
+    color: var(--bg-main);
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--bg-main);
+    @include mix.mqh(370px) {
+      word-break: break-word;
+    }
+  }
+}
+
+.Form {
+  padding: 2rem;
+  width: 100%;
+  display: grid;
+  gap: 0.5rem;
+  @include mix.mqh(370px) {
+    padding: 1rem;
+    width: 300px;
+  }
+  @include mix.mqh(300px) {
+    width: 250px;
+  }
+  background-color: var(--bg-main);
+
+  &-input {
+    width: 100%;
+    padding: 0.8rem;
+    border-bottom: 1px solid #d8d8d8;
+    transition: border-color 0.25s ease-out;
+    &:hover {
+      border-bottom: 1px solid #519cff;
+    }
+    &:focus {
+      border-bottom: 1px solid #004aad;
+    }
+  }
+
+  &-row,
+  &-input {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-row:first-child {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+    @include mix.mqh(500px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-row:nth-child(3) {
+    height: 120px;
+  }
+
+  &-row:last-child {
+    margin-top: 1rem;
+    justify-self: center;
+    .Button {
+      padding: 0 100px;
+      @include mix.mqh(300px) {
+        padding: 0 50px;
+      }
+    }
+  }
+}
