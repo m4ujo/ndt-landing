@@ -1,0 +1,46 @@
+.Button {
+  background-color: var(--primary);
+  border: 2px solid var(--fg-text);
+  border-radius: var(--radius);
+  color: var(--bg-main);
+  cursor: pointer;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  padding: 0 25px;
+  position: relative;
+  transition: color 0.2s ease-out;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    background-color: var(--fg-text);
+    border-radius: var(--radius);
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    transform: translate(8px, 4px);
+    transition: all 0.2s ease-out;
+    z-index: -1;
+  }
+
+  &:hover:after {
+    transform: translate(0, 0);
+    height: 46px;
+  }
+
+  &:hover {
+    background-color: var(--secondary);
+    color: var(--fg-text);
+    outline: 0;
+  }
+
+  &:active {
+    outline: 0;
+  }
+}

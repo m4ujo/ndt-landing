@@ -1,0 +1,48 @@
+@use './../../scss/mixins.scss' as mix;
+
+.Card {
+  perspective: 1000px;
+
+  &-wrapper {
+    width: 400px;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    @include mix.mqh(420px) {
+      width: 250px;
+    }
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--fg-text);
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+  }
+
+  &-content {
+    pointer-events: none;
+  }
+
+  &-title {
+    margin-bottom: 0.8rem;
+    font-family: var(--ff-special);
+  }
+
+  &.blue {
+    & .Card-wrapper:hover {
+      background-color: var(--primary);
+      transition-property: background-color, color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      p {
+        color: var(--bg-main);
+      }
+    }
+  }
+
+  &.yellow {
+    & .Card-wrapper:hover {
+      background-color: var(--secondary);
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.Clients {
+  padding: 8rem 0;
+  text-align: center;
+  display: grid;
+  place-content: center;
+
+  .Clients-images {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}

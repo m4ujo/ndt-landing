@@ -1,0 +1,46 @@
+@use '../../scss/mixins.scss' as mix;
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  background-color: transparent;
+  position: fixed;
+  z-index: 3;
+  padding: 0 10rem;
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  &::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.192);
+    z-index: -8;
+  }
+  @include mix.mqh(1400px) {
+    padding: 0 5rem;
+  }
+  @include mix.mqh(1000px) {
+    padding: 0 3rem;
+    &-nav {
+      gap: 1rem;
+    }
+  }
+  @include mix.mqh(768px) {
+    padding: 0 1rem;
+  }
+  &-logo {
+    width: 160px;
+    @include mix.mqh(480px) {
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use "./mixins.scss" as mix;
+
+.special {
+  font-size: var(--special);
+  font-weight: var(--fw-special);
+  font-family: var(--ff-special);
+}
+

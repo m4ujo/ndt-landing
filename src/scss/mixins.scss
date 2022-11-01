@@ -1,0 +1,11 @@
+@mixin mqh($size-w: 480px) {
+  @media screen and (max-width: $size-w) {
+    @content;
+  }
+}
+
+@mixin mqv($size-h: 480px) {
+  @media screen and (max-height: $size-h) {
+    @content;
+  }
+}
