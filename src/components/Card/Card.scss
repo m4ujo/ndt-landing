@@ -10,6 +10,9 @@
     @include mix.mqh(420px) {
       width: 250px;
     }
+    @include mix.mqh(300px) {
+      width: 230px;
+    }
     background-color: var(--bg-secondary);
     border: 2px solid var(--fg-text);
     border-radius: 10px;
