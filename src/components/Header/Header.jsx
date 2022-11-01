@@ -5,24 +5,15 @@ import { Squash as Hamburger } from 'hamburger-react'
 import './header.scss'
 
 const Header = () => {
-  const [activeNav, setActiveNav] = useState('')
+  const [navOpen, setNavOpen] = useState(false)
   return (
     <header className='Header'>
       <a href='/' className='Header-imageContainer'>
         <img src={Logo} alt='' className='Header-logo' />
       </a>
       <div className='Header-nav'>
-        <Nav activeNav={activeNav} />
-        <Hamburger
-          onToggle={(toggled) => {
-            if (toggled) {
-              setActiveNav(' is-active')
-            } else {
-              setActiveNav('')
-            }
-          }}
-          size={20}
-        />
+        <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
+        <Hamburger toggled={navOpen} toggle={setNavOpen} onToggle={(toggled) => setNavOpen(toggled)} size={20} rounded />
       </div>
     </header>
   )

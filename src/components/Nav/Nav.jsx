@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import './nav.scss'
 
-export default function Nav({ activeNav }) {
+export default function Nav({ navOpen, setNavOpen }) {
   const ref = useRef()
 
   useEffect(() => {
@@ -10,13 +10,13 @@ export default function Nav({ activeNav }) {
     for (let i = 0; i < navLinks.length; i++) {
       const element = navLinks[i]
       element.addEventListener('click', () => {
-        console.log('test')
+        setNavOpen(false)
       })
     }
   }, [])
 
   return (
-    <nav className={'Nav'.concat(`${activeNav}`)} ref={ref}>
+    <nav className={`Nav${navOpen ? ' is-active' : ''}`} ref={ref}>
       <ul className='Nav-content'>
         <a href='#home' className='Nav-link'>
           Home
