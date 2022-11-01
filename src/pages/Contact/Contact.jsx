@@ -7,9 +7,8 @@ const Contact = () => {
     <div id='contact' className='Contact'>
       <section className='Contact-section'>
         <h2 className='Contact-title h1'>Contact Us</h2>
-
         <main className='Contact-form'>
-          <form action='post' className='Form'>
+          <form className='Form'>
             <div className='Form-row'>
               <input
                 type='text'
