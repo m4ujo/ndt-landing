@@ -7,10 +7,13 @@
   overflow-x: hidden;
   background: linear-gradient(
     180deg,
-    rgba(0, 46, 102, 1) 26%,
-    rgba(43, 82, 128, 1) 60%,
-    rgba(122, 146, 175, 1) 84%,
-    rgba(255, 255, 255, 1) 100%
+    #002e66 0%,
+    #101010 59%,
+    #3b3b3b 72%,
+    #6c6c6c 81%,
+    #888888 87%,
+    #b9b9b9 93%,
+    #ffffff 100%
   );
 
   &-header {
