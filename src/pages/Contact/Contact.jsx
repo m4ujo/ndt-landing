@@ -28,10 +28,10 @@ const Contact = () => {
             <div className='Form-row'>
               <input
                 type='text'
-                name='affair'
-                id='affair'
+                name='subject'
+                id='subject'
                 className='Form-input'
-                placeholder='Affair'
+                placeholder='Subject'
               />
             </div>
             <div className='Form-row'>
@@ -48,18 +48,29 @@ const Contact = () => {
           </form>
           <aside className='Contact-aside'>
             <p className='Contact-infoSubtitle h3'>More Info</p>
-            <a className='Contact-info' href='https://goo.gl/maps/f5nuJb2eV6DZat6DA' target={'_blank'}>
+            <a
+              className='Contact-info'
+              href='https://goo.gl/maps/f5nuJb2eV6DZat6DA'
+              target={'_blank'}
+            >
               <i className='Contact-infoIcon bx bxs-map'></i>
-              Puerta de Pro, Av. Gerardo Unger 7875, San Martín de Porres 15311
+              <p>
+                Puerta de Pro, Av. Gerardo Unger 7875, San Martín de Porres
+                15311
+              </p>
+            </a>
+            <a
+              className='Contact-info'
+              href='https://api.whatsapp.com/send?phone=+51990029120&text=Hola,%20estamos%20interesados%20en%20sus%20servicios.'
+              target={'_blank'}
+            >
+              <i className='Contact-infoIcon bx bxl-whatsapp'></i>
+              <p>990029120</p>
             </a>
             <p className='Contact-info'>
               <i className='Contact-infoIcon bx bxs-phone'></i>
               01 5369357
             </p>
-            <a className='Contact-info' href='https://api.whatsapp.com/send?phone=+51990029120&text=Hola,%20estamos%20interesados%20en%20sus%20servicios.' target={'_blank'}>
-              <i className='Contact-infoIcon bx bxl-whatsapp'></i>
-              990029120
-            </a>
             <p className='Contact-info'>
               <i className='Contact-infoIcon bx bxs-envelope'></i>
               mhuaranga@weldingtech.com.pe
