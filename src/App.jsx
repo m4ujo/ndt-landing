@@ -1,5 +1,4 @@
 import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Services from './pages/Services/Services'
@@ -17,7 +16,6 @@ const App = () => {
         <Clients />
         <Contact />
       </main>
-      <Footer />
     </div>
   )
 }
