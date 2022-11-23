@@ -1,13 +1,10 @@
-import { servicesImages as images, servicesInfo as data } from './data'
-import Carousel from './../../components/Carousel/Carousel'
+import { servicesInfo as data } from './data'
 import Card from '../../components/Card/Card'
-import './services.scss'
 
 const Services = () => {
   return (
     <div id='services' className='Services'>
       <header className='Services-header'>
-        <Carousel images={images} />
         <h2 className='Services-title h1'>Services</h2>
       </header>
       <section className='Services-section'>
@@ -24,7 +21,7 @@ const Services = () => {
         </div>
         <div className='Services-cards'>
           {data.map(({ title, description }, index) => {
-            return <Card key={index} title={title} description={description} color={(index % 2 == 0) ? 'blue' : 'yellow'} />
+            return <Card key={index} title={title} description={description} color='green' />
           })}
         </div>
       </section>

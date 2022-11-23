@@ -1,5 +1,4 @@
 import Card from './../../components/Card/Card'
-import './about.scss'
 
 const data = [
   {
@@ -27,10 +26,10 @@ const About = () => {
     <div id='about-us' className='About'>
       <section className='About-section'>
         <h2 className='About-title h1'>About Us</h2>
-        <div className='About-cards'>
+        <div className='About-cards section'>
           {data.map(({ id, title, description }) => {
             return (
-              <Card key={id} title={title} description={description} color={'yellow'} />
+              <Card key={id} title={title} description={description} color='black' />
             )
           })}
         </div>

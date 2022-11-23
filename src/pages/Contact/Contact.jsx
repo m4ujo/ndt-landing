@@ -1,13 +1,41 @@
 import Button from './../../components/Button/Button'
 
-import './contact.scss'
-
 const Contact = () => {
   return (
     <div id='contact' className='Contact'>
       <section className='Contact-section'>
         <h2 className='Contact-title h1'>Contact Us</h2>
         <main className='Contact-form'>
+          <aside className='Contact-aside'>
+            <p className='Contact-infoSubtitle h3'>Info</p>
+            <a
+              className='Contact-info'
+              href='https://goo.gl/maps/f5nuJb2eV6DZat6DA'
+              target='_blank' rel='noreferrer'
+            >
+              <i className='Contact-infoIcon bx bxs-map' />
+              <p>
+                Puerta de Pro, Av. Gerardo Unger 7875, San Martín de Porres
+                15311
+              </p>
+            </a>
+            <a
+              className='Contact-info'
+              href='https://api.whatsapp.com/send?phone=+51951087033&text=Hola,%20estamos%20interesados%20en%20sus%20servicios.'
+              target='_blank' rel='noreferrer'
+            >
+              <i className='Contact-infoIcon bx bxl-whatsapp' />
+              <p>951087033</p>
+            </a>
+            <p className='Contact-info'>
+              <i className='Contact-infoIcon bx bxs-phone' />
+              01 5159999
+            </p>
+            <p className='Contact-info'>
+              <i className='Contact-infoIcon bx bxs-envelope' />
+              mcastillo@ndt.com.pe
+            </p>
+          </aside>
           <form className='Form'>
             <div className='Form-row'>
               <input
@@ -40,42 +68,12 @@ const Contact = () => {
                 id='message'
                 className='Form-input'
                 placeholder='Message'
-              ></textarea>
+              />
             </div>
             <div className='Form-row'>
               <Button text='Send' />
             </div>
           </form>
-          <aside className='Contact-aside'>
-            <p className='Contact-infoSubtitle h3'>More Info</p>
-            <a
-              className='Contact-info'
-              href='https://goo.gl/maps/f5nuJb2eV6DZat6DA'
-              target={'_blank'}
-            >
-              <i className='Contact-infoIcon bx bxs-map'></i>
-              <p>
-                Puerta de Pro, Av. Gerardo Unger 7875, San Martín de Porres
-                15311
-              </p>
-            </a>
-            <a
-              className='Contact-info'
-              href='https://api.whatsapp.com/send?phone=+51990029120&text=Hola,%20estamos%20interesados%20en%20sus%20servicios.'
-              target={'_blank'}
-            >
-              <i className='Contact-infoIcon bx bxl-whatsapp'></i>
-              <p>990029120</p>
-            </a>
-            <p className='Contact-info'>
-              <i className='Contact-infoIcon bx bxs-phone'></i>
-              01 5369357
-            </p>
-            <p className='Contact-info'>
-              <i className='Contact-infoIcon bx bxs-envelope'></i>
-              mhuaranga@weldingtech.com.pe
-            </p>
-          </aside>
         </main>
       </section>
     </div>

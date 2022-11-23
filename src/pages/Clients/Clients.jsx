@@ -1,8 +1,6 @@
 import Clients1 from './../../assets/images/clientes1.jpg'
 import Clients2 from './../../assets/images/clientes2.jpg'
 
-import './clients.scss'
-
 const Clients = () => {
   return (
     <div id='clients' className='Clients'>
