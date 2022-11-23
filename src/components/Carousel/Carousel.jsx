@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import './carousel.scss'
 
 const Carousel = ({ images }) => {
   const ref = useRef()
@@ -21,10 +20,12 @@ const Carousel = ({ images }) => {
 
   return (
     <div className='Carousel' ref={ref}>
-      {images.map(({image, alt}, index) => {
-        return <div className="Carousel-item" key={index}>
-          <img src={image} alt={alt} className='Carousel-image' />
-        </div>
+      {images.map(({ image, alt }, index) => {
+        return (
+          <div className='Carousel-item' key={index}>
+            <img src={image} alt={alt} className='Carousel-image' />
+          </div>
+        )
       })}
     </div>
   )

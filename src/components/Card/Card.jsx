@@ -1,7 +1,6 @@
 import { useRef, useEffect } from 'react'
-import './Card.scss'
 
-export default function Card({ title, description, color }) {
+export default function Card ({ title, description, color }) {
   const ref = useRef()
 
   useEffect(() => {

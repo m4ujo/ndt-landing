@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import Nav from '../Nav/Nav'
-import Logo from './../../assets/images/logo.png'
+import Logo from './../../assets/images/logo.svg'
 import { Squash as Hamburger } from 'hamburger-react'
-import './header.scss'
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false)

@@ -1,7 +1,6 @@
 import { useRef, useEffect } from 'react'
-import './nav.scss'
 
-export default function Nav({ navOpen, setNavOpen }) {
+export default function Nav ({ navOpen, setNavOpen }) {
   const ref = useRef()
 
   useEffect(() => {
