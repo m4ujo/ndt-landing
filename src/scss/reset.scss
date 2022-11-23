@@ -1,4 +1,4 @@
-@use './mixins.scss' as mix;
+@use "./mixins.scss" as mix;
 
 * {
   margin: 0;
@@ -12,10 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   min-height: 100vh;
   font-family: var(--ff-main);
-  font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,7 +24,8 @@ html {
   overflow-x: hidden;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -66,23 +67,30 @@ em {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--fg-title);
   font-family: var(--ff-special);
 }
-p, span, a {
+p,
+span,
+a {
   color: var(--fg-text);
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: var(--h1);
   font-weight: var(--fw-extrabold);
 }
-h2, .h2 {
+h2,
+.h2 {
   font-size: var(--h2);
   font-weight: var(--fw-bold);
 }
-h3, .h3 {
+h3,
+.h3 {
   font-size: var(--h3);
   font-weight: var(--fw-semibold);
 }
@@ -94,7 +102,7 @@ blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -128,7 +136,7 @@ svg {
 }
 
 ::selection {
-  background-color: #444444;
+  background-color: rgb(45, 45, 45);
   color: var(--bg-main);
 }
 

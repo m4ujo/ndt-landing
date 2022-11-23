@@ -1,5 +1,17 @@
-@use './scss/fonts.scss';
-@use './scss/mixins.scss';
-@use './scss/variables.scss';
-@use './scss/reset.scss';
-@use './scss/reusable.scss';
+@use "./scss/fonts.scss";
+@use "./scss/mixins.scss";
+@use "./scss/variables.scss";
+@use "./scss/reset.scss";
+@use "./scss/reusable.scss";
+
+@use "./components/Button/button.scss";
+@use "./components/Header/header.scss";
+@use "./components/Nav/nav.scss";
+@use "./components/Card/card.scss";
+@use "./components/Carousel/carousel.scss";
+
+@use "./pages/Home/home.scss";
+@use "./pages/About/about.scss";
+@use "./pages/Services/services.scss";
+@use "./pages/Clients/clients.scss";
+@use "./pages/Contact/contact.scss";
