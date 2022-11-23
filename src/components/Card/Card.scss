@@ -1,24 +1,12 @@
-@use './../../scss/mixins.scss' as mix;
+@use "./../../scss/mixins.scss" as mix;
 
 .Card {
   perspective: 1000px;
 
   &-wrapper {
-    width: 400px;
+    width: 100%;
     height: 100%;
     padding: 2.5rem 2rem;
-    @include mix.mqh(450px) {
-      width: 350px;
-    }
-    @include mix.mqh(400px) {
-      width: 300px;
-    }
-    @include mix.mqh(300px) {
-      width: 230px;
-    }
-    @include mix.mqh(250px) {
-      width: 200px;
-    }
     background-color: var(--bg-secondary);
     border: 2px solid var(--fg-text);
     border-radius: 10px;
@@ -34,24 +22,23 @@
     font-family: var(--ff-special);
   }
 
-  &.blue {
-    & .Card-wrapper:hover {
-      background-color: var(--primary);
-      transition-property: background-color, color;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-out;
-      p {
-        color: var(--bg-main);
-      }
+  &.black .Card-wrapper:hover {
+    background-color: var(--secondary);
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    p {
+      color: var(--bg-main);
     }
   }
 
-  &.yellow {
-    & .Card-wrapper:hover {
-      background-color: var(--secondary);
-      transition-property: background-color;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-out;
+  &.green .Card-wrapper:hover {
+    background-color: var(--primary);
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    p {
+      color: var(--bg-main);
     }
   }
 }
