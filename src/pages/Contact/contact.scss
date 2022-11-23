@@ -1,19 +1,11 @@
-@use './../../scss/mixins.scss' as mix;
+@use "./../../scss/mixins.scss" as mix;
 
 .Contact {
   display: grid;
   place-content: center;
-  padding: 6rem 0;
+  padding: 6rem 1rem;
   background-color: var(--secondary);
-  background: linear-gradient(
-    0deg,
-    #101010 0%,
-    #3b3b3b 14%,
-    #6c6c6c 30%,
-    #888888 40%,
-    #b9b9b9 60%,
-    #ffffff 100%
-  );
+  background-color: #ececec;
 
   &-title {
     text-align: center;
@@ -21,49 +13,16 @@
   }
 
   &-form {
-    width: 1100px;
     display: grid;
-    grid-template-columns: 60% 40%;
-    @include mix.mqh(1150px) {
-      width: 950px;
-    }
-    @include mix.mqh(1000px) {
-      width: 850px;
-    }
-    @include mix.mqh(900px) {
-      width: 750px;
-      grid-template-columns: 50% 50%;
-    }
-    @include mix.mqh(800px) {
-      width: 650px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    @include mix.mqh(720px) {
-      width: 500px;
-    }
-    @include mix.mqh(550px) {
-      width: 400px;
-    }
-    @include mix.mqh(450px) {
-      width: 400px;
-    }
-    @include mix.mqh(410px) {
-      width: 350px;
-    }
-    @include mix.mqh(370px) {
-      width: 280px;
-    }
-    @include mix.mqh(300px) {
-      width: 250px;
-    }
-    @include mix.mqh(260px) {
-      width: 220px;
-    }
+    grid-template-columns: 40% 60%;
     border-radius: 10px;
     border: 3px solid var(--fg-title);
     overflow: hidden;
     box-shadow: var(--shadow-card);
+    @include mix.mqh(970px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &-aside {
@@ -101,17 +60,10 @@
 }
 
 .Form {
-  padding: 2rem;
+  padding: 2rem 1rem;
   width: 100%;
   display: grid;
   gap: 1rem;
-  @include mix.mqh(370px) {
-    padding: 1rem;
-    width: 300px;
-  }
-  @include mix.mqh(300px) {
-    width: 250px;
-  }
   background-color: var(--bg-main);
 
   &-input {
@@ -120,10 +72,10 @@
     border-bottom: 1px solid #d8d8d8;
     transition: border-color 0.25s ease-out;
     &:hover {
-      border-bottom: 1px solid #519cff;
+      border-bottom: 1px solid #00ac7e;
     }
     &:focus {
-      border-bottom: 1px solid #004aad;
+      border-bottom: 1px solid var(--primary);
     }
   }
 
@@ -137,7 +89,7 @@
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-    @include mix.mqh(500px) {
+    @include mix.mqh(560px) {
       display: flex;
       flex-wrap: wrap;
     }
